@@ -1,0 +1,23 @@
+{
+  "name": "postgres-example",
+  "version": "1.0.0",
+  "description": "Server para consultar una base de datos postgres",
+  "author": "andcastillo",
+  "repository": "andcastillo/postgres-example",
+  "bugs": {
+    "url": "https://github.com/andcastillo/postgres-example/issues"
+  },
+  "homepage": "https://github.com/andcastillo/postgres-example",
+  "license": "MIT",
+  "main": "./src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+
+  "dependencies": {
+    "express":"4.15.1",
+    "supervisor": "0.11.0",
+    "pg":"6.1.0"
+  }
+}
+
