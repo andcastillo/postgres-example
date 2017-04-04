@@ -72,8 +72,10 @@ FROM node:4-onbuild
 # replace this with your application's default port
 EXPOSE 8888
 ```
+Arrancar construir y arrancar el contenedor de nodejs
 
+```
 sudo docker build -t node-app .
 sudo docker run -it --rm --link some-postgres:postgresserver --name my-server-app node-app
-
+```
 El contenedor correra la aplciacion que se encuentre referenciada por el archivo package.json
