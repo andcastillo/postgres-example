@@ -17,6 +17,6 @@ EXPOSE 8888
 ```
 
 sudo docker build -t node-app .
-sudo docker run -it --rm --name my-server-app node-app
+sudo docker run -it --rm --link some-postgres:postgresserver --name my-server-app node-app
 
 El contenedor correra la aplciacion que se encuentre referenciada por el archivo package.json
