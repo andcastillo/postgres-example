@@ -77,6 +77,6 @@ Arrancar construir y arrancar el contenedor de nodejs
 ```
 sudo docker build -t node-app .
 sudo docker run -it --rm -p 8888:8888 --name my-server-app node-app
-sudo docker run -it --rm --link some-postgres:postgresserver --name my-server-app node-app
+sudo docker run -it --rm -p 8888:8888 --link some-postgres:postgres --name my-server-app node-app
 ```
 El contenedor correra la aplciacion que se encuentre referenciada por el archivo package.json
