@@ -1,7 +1,8 @@
 var express = require('express')
 var app = express()
 
-const pg = require('pg');
+const Pool = require('pg-pool');
+
 var config = {
   user: 'postgres', //env var: PGUSER
   database: 'musica', //env var: PGDATABASE
@@ -12,7 +13,7 @@ var config = {
   idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
 };
 
-const pool = new pg.pool(config);
+const pool = new Pool(config);
 pool.on('error', function (err, client) {
   // if an error is encountered by a client while it sits idle in the pool
   // the pool itself will emit an error event with both the error and

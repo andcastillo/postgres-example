@@ -80,3 +80,9 @@ sudo docker run -it --rm -p 8888:8888 --name my-server-app node-app
 sudo docker run -it --rm -p 8888:8888 --link some-postgres:postgres --name my-server-app node-app
 ```
 El contenedor correra la aplciacion que se encuentre referenciada por el archivo package.json
+
+El contenedor de postgres debe estar corriendo y debe llamarse some-postgres
+
+```
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d andcastillo/postgres-musica
+```
