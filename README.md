@@ -1,6 +1,6 @@
 # postgres-example
 
-_Descargar el contenedor de node: https://hub.docker.com/_/node/
+nodejs container: https://hub.docker.com/_/node/
 
 ## Crear el proyecto en github
 
