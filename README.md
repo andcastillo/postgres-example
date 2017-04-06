@@ -84,5 +84,5 @@ El contenedor correra la aplciacion que se encuentre referenciada por el archivo
 El contenedor de postgres debe estar corriendo y debe llamarse some-postgres
 
 ```
-docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d andcastillo/postgres-musica
+docker run --name some-postgres -e POSTGRES_PASSWORD=mysecretpassword -d andcastillo/postgres_db_musica
 ```
