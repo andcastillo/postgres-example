@@ -61,14 +61,14 @@ Crear un repositorio en github para guardar este proyecto
 
 ## Docker con nodejs y npm
 
-Seguir los pasos en este tutorial para crear nuestro primer servidor con express
+Los siguientes pasos fueron tomados de este tutorial:
 
 http://mherman.org/blog/2015/02/12/postgresql-and-nodejs/#.WOQVQiErKAI
 
 Crear el Dockerfile con el siguiente contenido
 
 ```
-FROM node:4-onbuild
+FROM node:6-onbuild
 # replace this with your application's default port
 EXPOSE 8888
 ```
