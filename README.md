@@ -12,7 +12,7 @@ cd postgres-example
 
 
 
-Crear un archivo que se llame package.json con el siguiente contenido
+Crear un archivo que se llame package.json con el siguiente contenido. Reemplazar XXX por su nombre de usuario en github
 
 ```
 {
