@@ -5,7 +5,7 @@ const Pool = require('pg-pool');
 
 var config = {
   user: 'postgres', //env var: PGUSER
-  database: 'musica', //env var: PGDATABASE
+  database: 'musica2', //env var: PGDATABASE
   password: 'mysecretpassword', //env var: PGPASSWORD
   host: 'postgres', // Server hosting the postgres database
   port: 5432, //env var: PGPORT
