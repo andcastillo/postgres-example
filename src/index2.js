@@ -5,9 +5,9 @@ const Pool = require('pg-pool');
 
 var config = {
   user: 'postgres', //env var: PGUSER
-  database: 'banco', //env var: PGDATABASE
-  password: '123', //env var: PGPASSWORD
-  host: '127.0.0.1', // Server hosting the postgres database
+  database: 'musica2', //env var: PGDATABASE
+  password: 'mysecretpassword', //env var: PGPASSWORD
+  host: 'postgres', // Server hosting the postgres database
   port: 5432, //env var: PGPORT
   max: 10, // max number of clients in the pool
   idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
@@ -47,10 +47,10 @@ app.get('/usuarios', function (req, res) {
 	connect(function(err, client, done) {
   		if(err) {
     			return console.error('error fetching client from pool', err);
-        	}
+        }
+  
   		//use the client for executing the query
-		console.log('SELECT * FROM cliente WHERE identificacion =\''+req.query.id+'\'');
-  		client.query('SELECT * FROM cliente WHERE identificacion =\''+req.query.id+'\'', function(err, result) {
+  		client.query('SELECT * FROM usuario', function(err, result) {
     		//call `done(err)` to release the client back to the pool (or destroy it if there is an error)
     		done(err);
 
@@ -71,7 +71,7 @@ app.get('/consulta', function (req, res) {
         }
 
         //use the client for executing the query
-        client.query(req.query.query, function(err, result) {
+        client.query(req.param("query"), function(err, result) {
             //call `done(err)` to release the client back to the pool (or destroy it if there is an error)
             done(err);
 
